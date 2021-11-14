@@ -9,10 +9,8 @@ const leerTextoEnVozAlta = () => {
     return;
   }
 
-  // al div .all añadir la clase .oscurecer
   all[0].classList.add('oscurecer');
  
-
   const speech = new SpeechSynthesisUtterance();
   speech.text = texto.value;
   speech.lang = 'es-ES';
@@ -23,11 +21,9 @@ const leerTextoEnVozAlta = () => {
   speechSynthesis.speak(speech);
 
   speech.onend = () => {
-    // mostrar body
     all[0].classList.remove('oscurecer')
   }
 }
 
-// Agregar evento al boton
 btn.addEventListener('click', leerTextoEnVozAlta);
 
